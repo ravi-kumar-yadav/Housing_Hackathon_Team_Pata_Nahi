@@ -28,7 +28,7 @@
   },
 
   "oauth2":{
-    "client_id": "596974027585-8v6vrppkacrvb7s3okvhgiunu2ajli9v.apps.googleusercontent.com",
+    "client_id": "674013355642-ip74hvqoeo47krkr0pb79nt1kjvstcnp.apps.googleusercontent.com",
     "scopes": ["https://www.googleapis.com/customsearch/v1"]
   } 
 }
