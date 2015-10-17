@@ -5,7 +5,7 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
 
 	var x = new XMLHttpRequest();
 	//x.open ("GET", "https://www.googleapis.com/customsearch/v1?key=AIzaSyBnBZQ4bOWeOTcLoynj66BaXHfTUX4Ne-A&cx=004655086086434446616:7d7yxke8mis&fields=items(title)&q=qQGlySayAXo" + query_text, false);
-	x.open ("GET", "https://www.googleapis.com/customsearch/v1?key=AIzaSyC8QLYcVR2VjFhIwiADY7aDXPEN6h284ck&cx=012443875275557263734:ahw4azb9jc0&fields=items(title)&q=" + query_text, false);
+	x.open ("GET", "https://www.googleapis.com/customsearch/v1?key=AIzaSyDePM40I6nGSen3rWQRRfqupgFBgNjIs08&cx=001166133209638832330:jwvjleygts8&fields=items(title)&q=" + query_text, false);
 	x.send(null);
     
     console.log("Sending result in background");

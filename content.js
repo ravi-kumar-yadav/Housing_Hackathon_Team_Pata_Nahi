@@ -60,7 +60,7 @@ $(document).ready(function() {
             html_text = "";
             for(i=0; i<3; i++)
             {
-              html_text += "<div title='" + response.result[i] + "'>  <a class='allow_new_tab' href='https://www.google.co.in/#q="+ response.result[i].substr(0, 31) +"' target='_blank'>" + response.result[i].substr(0, 28) + " ...</a>" + "</div>"; 
+              html_text += "<div title='" + response.result[i] + "'>  <a class='allow_new_tab' href='https://www.google.co.in/#q="+ response.result[i].replace("'"," ") +"' target='_blank'>" + response.result[i].substr(0, 28) + " ...</a>" + "</div>"; 
 
             }
 

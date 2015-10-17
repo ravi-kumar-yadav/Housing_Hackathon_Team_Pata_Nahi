@@ -1,12 +1,12 @@
 {
-  "name": "Google Search",
+  "name": "Undelete Song",
   "version": "0.1",
   "manifest_version": 2,
-  "description": "Search Google for good results",
+  "description": "Get deleted songs on youtube",
 
   "browser_action": {
     "default_icon": "images/icon.jpg",
-    "default_title": "UnDelete Songs",
+    "default_title": "Get deleted songs on youtube",
     "default_popup": "background.html"
   },
 
@@ -18,7 +18,6 @@
   ],
 
   
-  // "permissions": [ "https://*.google.com/*"],
   "permissions": ["identity"],
 
   "content_security_policy": "script-src 'self' https://www.google.com; object-src 'self'",
@@ -28,7 +27,7 @@
   },
 
   "oauth2":{
-    "client_id": "674013355642-ip74hvqoeo47krkr0pb79nt1kjvstcnp.apps.googleusercontent.com",
+    "client_id": "440747040399-oh35v4dg46cn016276hrmgberuh8qaq9.apps.googleusercontent.com",
     "scopes": ["https://www.googleapis.com/customsearch/v1"]
   } 
 }
