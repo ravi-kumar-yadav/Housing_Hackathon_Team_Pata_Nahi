@@ -1,0 +1,34 @@
+{
+  "name": "Google Search",
+  "version": "0.1",
+  "manifest_version": 2,
+  "description": "Search Google for good results",
+
+  "browser_action": {
+    "default_icon": "images/icon.jpg",
+    "default_title": "Googole Search",
+    "default_popup": "background.html"
+  },
+
+  "content_scripts": [
+  	{
+  		"matches": ["<all_urls>"],
+  		"js": ["jquery-2.1.3.min.js", "content.js"]
+  	}
+  ],
+
+  
+  // "permissions": [ "https://*.google.com/*"],
+  "permissions": ["identity"],
+
+  "content_security_policy": "script-src 'self' https://www.google.com; object-src 'self'",
+
+  "background": {
+  	"scripts": ["background.js"]
+  },
+
+  "oauth2":{
+    "client_id": "596974027585-8v6vrppkacrvb7s3okvhgiunu2ajli9v.apps.googleusercontent.com",
+    "scopes": ["https://www.googleapis.com/customsearch/v1"]
+  } 
+}
