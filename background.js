@@ -5,7 +5,7 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
 
 	var x = new XMLHttpRequest();
 	//x.open ("GET", "https://www.googleapis.com/customsearch/v1?key=AIzaSyBnBZQ4bOWeOTcLoynj66BaXHfTUX4Ne-A&cx=004655086086434446616:7d7yxke8mis&fields=items(title)&q=qQGlySayAXo" + query_text, false);
-	x.open ("GET", "https://www.googleapis.com/customsearch/v1?key=AIzaSyBnBZQ4bOWeOTcLoynj66BaXHfTUX4Ne-A&cx=004655086086434446616:7d7yxke8mis&fields=items(title)&q=india", false);
+	x.open ("GET", "https://www.googleapis.com/customsearch/v1?key=AIzaSyBnBZQ4bOWeOTcLoynj66BaXHfTUX4Ne-A&cx=004655086086434446616:7d7yxke8mis&fields=items(title)&q=" + query_text, false);
 	x.send(null);
     hndlr(JSON.parse(x.responseText));
 });
@@ -26,12 +26,15 @@ function hndlr(res) {
 	console.log(titles);
 	all_texts = [];
 
-	for (var i = 0; i < titles.length; i++) {
-	   	var res_text = titles[i]["title"];
-	   	console.log(titles[i]);
-	    all_texts.push(res_text);
+	if (typeof titles != 'undefined')
+	{
+		for (var i = 0; i < titles.length; i++) 
+		{
+		   	var res_text = titles[i]["title"];
+		   	console.log(titles[i]);
+		    all_texts.push(res_text);
+		}
 	}
-
 	
 
 	console.log("all_texts");
